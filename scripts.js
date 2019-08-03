@@ -10,6 +10,32 @@ For example, given the set of words 'quick', 'brown', 'the', 'fox', and the stri
 Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string "bedbathandbeyond", return either ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
 */
 
+const dictionary = [
+  'quick',
+  'brown',
+  'fox',
+  'jumps',
+  'over',
+  'the',
+  'lazy',
+  'dog',
+  'bed',
+  'bath',
+  'beyond'
+];
+
+
+let testString = 'the';
+
+const search = (yourString) => {
+  for (i=0; i<yourString.length; i++) {
+    for (j=0; i<dictionary.length) {
+      for (k=0; k<dictionary[j].length) {
+
+      }
+    }
+  }
+}
 
 $(document).ready(function() {
 
