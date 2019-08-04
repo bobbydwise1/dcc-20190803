@@ -21,11 +21,11 @@ const dictionary = [
   'dog',
   'bed',
   'bath',
-  'beyond'
+  'beyond',
 ];
 
 
-let testString = 'the';
+let testString = 'bed';
 
 const matcher = (yourString, testword) => {
   if (yourString.length != testword.length) {
@@ -41,13 +41,13 @@ const matcher = (yourString, testword) => {
 
 const search = (yourString, dictionary) => {
   if (!yourString || !dictionary) {return 0}
-  let match = 0;
-  for (i=0; i<yourString.length; i++) {
+  let match = [];
     for (j=0; j<dictionary.length; j++) {
-        match = matcher(yourString, dictionary[j])
+        if (matcher(yourString, dictionary[j]) != 0) {
+          match.push(dictionary[j]);
+        }
       }
-      console.log('match = ', match)
-    }
+    console.log('match = ', match)
     return match;
   }
 
