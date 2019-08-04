@@ -27,15 +27,31 @@ const dictionary = [
 
 let testString = 'the';
 
-const search = (yourString) => {
+const matcher = (yourString, testword) => {
+  if (yourString.length != testword.length) {
+    return 0;
+  }
   for (i=0; i<yourString.length; i++) {
-    for (j=0; i<dictionary.length) {
-      for (k=0; k<dictionary[j].length) {
-
-      }
+    if (yourString[i] != testword[i]) {
+      return 0;
     }
   }
+  return testword;
 }
+
+const search = (yourString, dictionary) => {
+  if (!yourString || !dictionary) {return 0}
+  let match = 0;
+  for (i=0; i<yourString.length; i++) {
+    for (j=0; j<dictionary.length; j++) {
+        match = matcher(yourString, dictionary[j])
+      }
+      console.log('match = ', match)
+    }
+    return match;
+  }
+
+console.log(search(testString,dictionary))
 
 $(document).ready(function() {
 
