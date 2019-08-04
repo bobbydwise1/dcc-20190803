@@ -24,33 +24,13 @@ const dictionary = [
   'beyond',
 ];
 
-
 let testString = 'bed';
 
-const matcher = (yourString, testword) => {
-  if (yourString.length != testword.length) {
-    return 0;
-  }
-  for (i=0; i<yourString.length; i++) {
-    if (yourString[i] != testword[i]) {
-      return 0;
-    }
-  }
-  return testword;
+const searchTerms = (yourString, dictionary) => {
+  
 }
 
-const search = (yourString, dictionary) => {
-  if (!yourString || !dictionary) {return 0}
-  let match = [];
-    for (j=0; j<dictionary.length; j++) {
-        if (matcher(yourString, dictionary[j]) != 0) {
-          match.push(dictionary[j]);
-        }
-      }
-    console.log('match = ', match)
-    return match;
-  }
-
+console.log(matcher('bed',dictionary))
 console.log(search(testString,dictionary))
 
 $(document).ready(function() {
