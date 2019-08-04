@@ -39,7 +39,7 @@ $(document).ready(function() {
     'bath',
     'beyond',
   ];
-  let testString = 'quickbrownfoxthe';
+  let testString = 'thefoxquickbrownjumpsoverdoglazy';
 
   $('#output-section-1').text(dictionary);
   $('#output-section-2').text(testString);
